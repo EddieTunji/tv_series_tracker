@@ -62,6 +62,7 @@ This project demonstrates:
 - Stylized CLI output with `rich` for a smoother experience
 - Clear menus and guided prompts for each feature
 - Option to delete seasons
+- added watchlist functionalities
 
 ---
 
