@@ -37,5 +37,39 @@ This project demonstrates:
 
 ---
 
-## 📂 Project Structure
+
+## 🧪 Running the App
+
+1. Clone the repository
+2. Run `pipenv install`
+3. Seed the database: `pipenv run python db/seed.py`
+4. Launch the app: `pipenv run python app.py`
+
+---
+
+## 👤 Sample Use Flow
+
+- Select or create a user
+- Browse or add new series
+- Add seasons and episodes for a show
+- Mark progress by updating episode or season status
+- Write a review and assign a personal status like "Watching" or "Completed"
+
+---
+
+## ✨ Extras
+
+- Stylized CLI output with `rich` for a smoother experience
+- Clear menus and guided prompts for each feature
+- Option to delete seasons
+
+---
+
+## ✅ Still To Do (Stretch Ideas)
+
+- Episode-level progress tracking
+- Favorite series list
+- Export data to JSON or text
+
+
 
