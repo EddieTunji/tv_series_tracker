@@ -1,6 +1,6 @@
 import os
 from lib.db import engine, Base
-from lib import seed  # if seed logic is inside a function
+from lib import seed
 
 # Delete old DB file
 if os.path.exists("tv_series.db"):
