@@ -19,9 +19,9 @@ class User(Base):
     username = Column(String, unique=True, nullable=False)
 
     reviews = relationship("Review", back_populates="user")
-    series = relationship("Series", back_populates="user")
+    created_series = relationship("Series", back_populates="user")
     statuses = relationship("Status", back_populates="user")
-    series = relationship('Series', secondary=watchlist, back_populates='users')
+    watchlisted_series = relationship('Series', secondary=watchlist, back_populates='watchlisted_users')
 
 
     def __repr__(self):
@@ -56,8 +56,8 @@ class Series(Base):
     description = Column(String)
     user_id = Column(Integer, ForeignKey('users.id'))
 
-    user = relationship("User", back_populates="series")
-    users = relationship('User', secondary=watchlist, back_populates='series')
+    user = relationship("User", back_populates="created_series")
+    watchlisted_users = relationship('User', secondary=watchlist, back_populates='watchlisted_series')
 
     seasons = relationship("Season", back_populates="series", cascade="all, delete-orphan")
     reviews = relationship("Review", back_populates="series", cascade="all, delete-orphan")
